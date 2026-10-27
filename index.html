@@ -3,24 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Sistemas de caja, inventario, fiados y reportes para tiendas, talleres y servicio técnico en Colombia. Funcionan en computador y celular, aun sin internet.">
-<meta name="theme-color" content="#0f2a3a">
+<meta name="description" content="Software CLINICELL: sistemas de caja, inventario, fiados y reportes para tiendas, talleres y servicio técnico en Colombia. Funcionan en computador y celular, aun sin internet.">
+<meta name="theme-color" content="#0c0e12">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
-<meta property="og:title" content="Edier Software · Programas para su negocio">
-<meta property="og:description" content="Caja, inventario, fiados y reportes para tiendas, talleres y servicio técnico. Pida una prueba gratis por WhatsApp.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f2a3a'/><text x='32' y='45' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='38' fill='%23f2b632'>E</text></svg>">
-<title>Edier Software</title>
+<meta property="og:title" content="Software CLINICELL · Programas para su negocio">
+<meta property="og:description" content="Caja, inventario, fiados y reportes para tiendas, talleres y servicio técnico. Pida una demostración gratis por WhatsApp.">
+<meta property="og:image" content="https://edier27.github.io/software/promo/software-facebook.png">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<title>Software CLINICELL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
 /* Layout: cabecera fija oscura, presentación con una pantalla de caja funcional, secciones claras de ancho completo */
 :root {
-  --ink: #0f2a3a;
-  --ink-2: #163a4e;
+  --ink: #0c0e12;          /* negro carbón del logo CLINICELL */
+  --ink-2: #171b22;
   --ink-fg: #ffffff;
-  --ink-muted: #b7cad6;
+  --ink-muted: #b3bac4;
   --sun: #f2b632;
   --sun-ink: #2a1f00;
   --bg: #f5f7f8;
@@ -39,14 +41,14 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ink: #0a1c27; --ink-2: #10303f; --ink-fg: #ffffff; --ink-muted: #a9bfcc;
+    --ink: #0a0b0f; --ink-2: #15181e; --ink-fg: #ffffff; --ink-muted: #abb3bd;
     --sun: #f5c04e; --sun-ink: #241a00;
     --bg: #0d1820; --surface: #14242f; --surface-2: #1a2e3b; --fg: #e5edf2; --muted: #9db1be; --line: #273d4d;
     --ok: #4cc28c; --warn: #f0a050; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --ink: #0a1c27; --ink-2: #10303f; --ink-fg: #ffffff; --ink-muted: #a9bfcc;
+  --ink: #0a0b0f; --ink-2: #15181e; --ink-fg: #ffffff; --ink-muted: #abb3bd;
   --sun: #f5c04e; --sun-ink: #241a00;
   --bg: #0d1820; --surface: #14242f; --surface-2: #1a2e3b; --fg: #e5edf2; --muted: #9db1be; --line: #273d4d;
   --ok: #4cc28c; --warn: #f0a050; color-scheme: dark;
@@ -74,9 +76,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* Cabecera */
 .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--ink); color: var(--ink-fg); border-bottom: 1px solid rgba(255,255,255,.08); }
-.nav .wrap { display: flex; align-items: center; gap: 28px; padding-block: 14px; }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--f-display); font-weight: 800; font-size: 19px; }
-.logo svg { width: 32px; height: 32px; flex: none; }
+.nav .wrap { display: flex; align-items: center; gap: 28px; padding-block: 6px; }
+.logo { display: flex; align-items: center; gap: 14px; text-decoration: none; font-family: var(--f-display); font-weight: 800; font-size: 18px; }
+.logo picture { display: block; flex: none; }
+.logo img { width: 160px; height: 64px; object-fit: cover; object-position: 50% 51%; display: block; mix-blend-mode: lighten; -webkit-mask-image: radial-gradient(ellipse 50% 50% at center, #000 70%, transparent 100%); mask-image: radial-gradient(ellipse 50% 50% at center, #000 70%, transparent 100%); }
+.logo > span { border-left: 1px solid rgba(255,255,255,.18); padding-left: 14px; }
 .logo small { display: block; font-family: var(--f-body); font-weight: 600; font-size: 12px; color: var(--ink-muted); letter-spacing: .02em; line-height: 1.1; }
 .logo span { line-height: 1.1; }
 .links { display: flex; gap: 24px; margin-left: auto; list-style: none; padding: 0; margin-block: 0; }
@@ -204,6 +208,9 @@ footer a:hover { color: var(--ink-fg); }
   body { font-size: 16px; }
   .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
   .logo small { display: none; }
+  .logo img { width: 120px; height: 48px; }
+  .logo { gap: 10px; }
+  .logo > span { padding-left: 10px; font-size: 16px; }
   .nav .btn span { display: none; }
   .pos-body { grid-template-columns: 1fr; }
   .ticket { border-left: 0; border-top: 1px solid var(--line); }
@@ -218,14 +225,16 @@ footer a:hover { color: var(--ink-fg); }
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></symbol>
   <symbol id="ok" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
-  <symbol id="logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#f2b632"/><rect x="9" y="8" width="4" height="16" fill="#0f2a3a"/><rect x="9" y="8" width="14" height="4" fill="#0f2a3a"/><rect x="9" y="14" width="10" height="4" fill="#0f2a3a"/><rect x="9" y="20" width="14" height="4" fill="#0f2a3a"/></symbol>
 </svg>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#inicio" aria-label="Edier Software, inicio">
-      <svg><use href="#logo"/></svg>
-      <span>Edier Software<small>Programas para negocios</small></span>
+    <a class="logo" href="#inicio" aria-label="Software CLINICELL, inicio">
+      <picture>
+        <source srcset="clinicell-logo.png" media="(prefers-reduced-motion: reduce)">
+        <img src="clinicell-logo.gif" alt="CLINICELL" width="160" height="60">
+      </picture>
+      <span>Software<small>Programas para negocios</small></span>
     </a>
     <ul class="links">
       <li><a href="#trabajos">Sistemas</a></li>
@@ -315,7 +324,7 @@ footer a:hover { color: var(--ink-fg); }
         </article>
         <article class="work">
           <div class="work-top"><span class="for">Servicio técnico de celulares</span><span class="pill">En uso</span></div>
-          <h3>CLINICELL</h3>
+          <h3>CLINICELL Servicio Técnico</h3>
           <p>Control de reparaciones y ventas para un local de servicio técnico y accesorios.</p>
           <ul class="feats">
             <li><svg><use href="#ok"/></svg>Órdenes de reparación con código QR</li>
@@ -409,7 +418,7 @@ footer a:hover { color: var(--ink-fg); }
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Edier Software · Programas para negocios en Colombia</span>
+    <span>© 2026 Software CLINICELL · Programas para negocios en Colombia</span>
     <nav aria-label="Pie de página">
       <a href="#trabajos">Sistemas</a>
       <a href="#proceso">Cómo trabajo</a>
